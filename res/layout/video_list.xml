@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1280dp"
+    android:layout_height="480dp"
+    android:background="@drawable/playlist_bg"
+    android:paddingTop="90dp" >
+
+    <RelativeLayout
+        android:id="@+id/right_usb"
+        android:layout_width="420dp"
+        android:layout_height="wrap_content"
+  >
+<LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    >
+    
+        <Button
+            android:id="@+id/default_usb"
+            android:layout_width="420dp"
+            android:layout_height="130dp"
+            android:background="@drawable/bmw_list_item_btn_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/defaultusb"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/bmw_item_front_size_title" />
+
+        <Button
+            android:id="@+id/usb1"
+            android:layout_width="420dp"
+            android:layout_height="130dp"
+            android:background="@drawable/bmw_list_item_btn_bg"
+            android:gravity="center"
+            android:layout_below="@id/default_usb"
+            android:text="@string/usb1"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/bmw_item_front_size_title"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/usb2"
+            android:layout_width="420dp"
+            android:layout_height="130dp"
+            android:background="@drawable/bmw_list_item_btn_bg"
+            android:gravity="center"
+            android:text="@string/usb2"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/bmw_item_front_size_title"
+            android:visibility="gone" />
+
+        
+        <Button
+            android:id="@+id/sd1"
+            android:layout_width="420dp"
+            android:layout_height="130dp"
+            android:background="@drawable/bmw_list_item_btn_bg"
+            android:gravity="center"
+            android:text="@string/sdcard1"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/bmw_item_front_size_title"
+            android:visibility="gone" />
+        
+        <Button
+            android:id="@+id/sd2"
+            android:layout_width="420dp"
+            android:layout_height="130dp"
+            android:background="@drawable/bmw_list_item_btn_bg"
+            android:gravity="center"
+            android:text="@string/sdcard2"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/bmw_item_front_size_title"
+            android:visibility="gone" />
+    
+</LinearLayout>
+
+        <Button
+            android:id="@+id/scan"
+            android:layout_width="420dp"
+            android:layout_height="130dp"
+            android:background="@drawable/bmw_list_item_scan"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            android:textSize="@dimen/bmw_item_front_size_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/right_usb" >
+
+        <ListView
+            android:id="@+id/video_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/right_usb" >
+        </ListView>
+
+        <include layout="@layout/media_loading" />
+    </RelativeLayout>
+
+</RelativeLayout>
